@@ -1,14 +1,27 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+
+import { Menu } from "./components/menu";
+import { Rotas } from "./routes";
+import { Header } from "./components/header";
+import { Summary } from "./components/summary";
+import { Table } from "./components/Table";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>Ola mundo</div>
+      <div className="flex h-screen">
+        <Menu />
+        <div className="flex flex-col flex-grow">
+          <BrowserRouter>
+          <Header />
+            <div className="flex-grow p-6">
+                  <Summary/>
+                  <Table/>
+              <Rotas />
+            </div>
+          </BrowserRouter>
+        </div>
+      </div>
     </>
   );
 }

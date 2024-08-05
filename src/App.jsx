@@ -13,11 +13,12 @@ function App() {
         <Menu />
         <div className="flex flex-col flex-grow">
           <BrowserRouter>
+          <Rotas />
           <Header />
             <div className="flex-grow p-6">
                   <Summary/>
                   <Table/>
-              <Rotas />
+            
             </div>
           </BrowserRouter>
         </div>

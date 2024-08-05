@@ -6,11 +6,11 @@ export const AddLoja = () => {
     <div className="min-h-screen bg-gray-100 flex items-center justify-center relative">
       <Link to="/" className="inline-block  absolute top-2 left-2 ">
         <button className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-          Página Inicial
+        Home page
         </button>
       </Link>
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-3xl">
-        <h2 className="text-2xl font-bold mb-6 text-left">Adicionar Loja</h2>
+        <h2 className="text-2xl font-bold mb-6 text-left">Add Store</h2>
         <form>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div>
@@ -57,7 +57,7 @@ export const AddLoja = () => {
               type="submit"
               className="bg-blue-500 text-white py-2 px-20 rounded-md"
             >
-              Cadastre
+              Sign
             </button>
           </div>
         </form>

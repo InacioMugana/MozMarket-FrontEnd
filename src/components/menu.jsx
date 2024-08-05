@@ -13,22 +13,22 @@ export const Menu = () => {
           <ul>
             <NavLink to="/admin/dashboard" className="mb-2">
               <a href="#" className="block p-2 hover:bg-gray-200 rounded">
-                Painel
+              Dashboard
               </a>
             </NavLink>
             <NavLink to="/customer" className="mb-2">
               <a href="#" className="block p-2 hover:bg-gray-200 rounded">
-                Clientes
+                Customer
               </a>
             </NavLink>
             <NavLink to="/store" className="mb-2">
               <a href="#" className="block p-2 hover:bg-gray-200 rounded">
-                Loja
+                store
               </a>
             </NavLink>
             <NavLink to="/add-store" className="mb-2">
               <a href="#" className="block p-2 hover:bg-gray-200 rounded">
-                Adicionar loja
+                Add storea
               </a>
             </NavLink>
           </ul>

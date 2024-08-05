@@ -15,13 +15,14 @@ function App() {
         <Menu />
         <div className="flex flex-col flex-grow">
           <BrowserRouter>
+          <Rotas />
           <Header />
             <div className="flex-grow p-6">
                   {/* <Summary/>
                   <Table/> 
                  <AddLoja/>*/}
                   <AddProduto/>
-              <Rotas />
+            
             </div>
           </BrowserRouter>
         </div>

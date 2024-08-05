@@ -1,3 +1,4 @@
+import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/Logo.svg";
 
 export const Menu = () => {
@@ -10,41 +11,41 @@ export const Menu = () => {
         </div>
         <div className="flex justify-center items-center">
           <ul>
-            <li className="mb-2">
+            <NavLink to="/admin/dashboard" className="mb-2">
               <a href="#" className="block p-2 hover:bg-gray-200 rounded">
                 Painel
               </a>
-            </li>
-            <li className="mb-2">
+            </NavLink>
+            <NavLink to="/customer" className="mb-2">
               <a href="#" className="block p-2 hover:bg-gray-200 rounded">
                 Clientes
               </a>
-            </li>
-            <li className="mb-2">
+            </NavLink>
+            <NavLink to="/store" className="mb-2">
               <a href="#" className="block p-2 hover:bg-gray-200 rounded">
                 Loja
               </a>
-            </li>
-            <li className="mb-2">
+            </NavLink>
+            <NavLink to="/add-store" className="mb-2">
               <a href="#" className="block p-2 hover:bg-gray-200 rounded">
-                Adicionar Produto
+                Adicionar loja
               </a>
-            </li>
+            </NavLink>
           </ul>
         </div>
 
         <div className="flex justify-center items-center absolute bottom-0">
           <ul>
-            <li className="mb-2">
+            <Link to="/" className="mb-2">
               <a href="#" className="block p-2 hover:bg-gray-200 rounded">
                 Configurações
               </a>
-            </li>
-            <li className="mb-2">
+            </Link>
+            <NavLink to="/add-store" className="mb-2">
               <a href="#" className="block p-2 hover:bg-gray-200 rounded">
                 Help
               </a>
-            </li>
+            </NavLink>
             <li className="mb-2">
               <button className=" p-2 bg-red-500 text-white rounded-full  hover:bg-red-600">
                 Logout

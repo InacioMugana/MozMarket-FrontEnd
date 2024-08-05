@@ -2,13 +2,21 @@ import { Routes,Route } from "react-router-dom"
 import { Home } from "./pages/Home"
 import { NotFound } from "./pages/NotFound"
 import Login from "./pages/Login"
+import { Store } from "./pages/Store"
+import { Customers } from "./pages/customer"
+import AddLoja from "./components/addLoja"
+
+
 
 export const Rotas=()=>{
     return(
         <Routes>
             <Route path="/" element={<Login/>} />
-            <Route path="/*" element={<NotFound/>} />
-
+            <Route path="/admin/dashboard" element={<Home/>}/>
+            <Route path="*" element={<NotFound/>} />
+            <Route path="/store" element={<Store/>} />
+            <Route path="/customer" element={<Customers/>} />
+            <Route path="/add-store" element={<AddLoja/>} />
           
         </Routes>
     )

@@ -5,6 +5,8 @@ import { Rotas } from "./routes";
 import { Header } from "./components/header";
 import { Summary } from "./components/summary";
 import { Table } from "./components/Table";
+import { AddProduto } from "./components/addProduto";
+
 
 function App() {
   return (
@@ -16,8 +18,10 @@ function App() {
           <Rotas />
           <Header />
             <div className="flex-grow p-6">
-                  <Summary/>
-                  <Table/>
+                  {/* <Summary/>
+                  <Table/> 
+                 <AddLoja/>*/}
+                  <AddProduto/>
             
             </div>
           </BrowserRouter>

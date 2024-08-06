@@ -8,11 +8,12 @@ import AddLoja from "./components/addLoja"
 import { SignUp } from "./pages/signup"
 import { Dashboard_User } from "./pages/users/Dashboard_User"
 import { Profile_User } from "./pages/users/Profile_User"
+import { Home_user } from "./pages/users/Home_user"
 
 export const Rotas=()=>{
     return(
         <Routes>
-            <Route path="/" element={<Login/>} />
+            <Route path="/login" element={<Login/>} />
             <Route path="/admin/dashboard" element={<Home/>}/>
             <Route path="*" element={<NotFound/>} />
             <Route path="/store" element={<Store/>} />
@@ -22,6 +23,7 @@ export const Rotas=()=>{
 
 
             <Route path="/user/dashboard" element= {<Dashboard_User/>}/>
+            <Route path="/"   element={<Home_user/>} />
             <Route path="/user/profile" element= {<Profile_User/>}/>
     
         </Routes>

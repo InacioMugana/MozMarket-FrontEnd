@@ -1,15 +1,19 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Link } from "react-router-dom";
 
-
- const Login =()=> {
-return (
+const Login = () => {
+  return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="max-w-md w-full bg-white shadow-md rounded p-6">
-        <h2 className="text-center text-3xl font-bold text-blue-600 mb-4">MarketPlace</h2>
+        <h2 className="text-center text-3xl font-bold text-blue-600 mb-4">
+          MarketPlace
+        </h2>
         <h3 className="text-center text-xl font-bold text-black mb-6">LOGIN</h3>
         <form className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 text-left">Name</label>
+            <label className="block text-sm font-medium text-gray-700 text-left">
+              Name
+            </label>
             <input
               type="text"
               name="name"
@@ -18,7 +22,9 @@ return (
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 text-left">Password</label>
+            <label className="block text-sm font-medium text-gray-700 text-left">
+              Password
+            </label>
             <input
               type="password"
               name="password"
@@ -32,9 +38,13 @@ return (
                 type="checkbox"
                 className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
               />
-              <span className="ml-2 block text-sm text-gray-900">Remember-me</span>
+              <span className="ml-2 block text-sm text-gray-900">
+                Remember-me
+              </span>
             </label>
-            <a href="#" className="text-sm text-blue-600 hover:underline">Forgot password?</a>
+            <a href="#" className="text-sm text-blue-600 hover:underline">
+              Forgot password?
+            </a>
           </div>
           <div>
             <button
@@ -46,15 +56,13 @@ return (
           </div>
           <div className="text-center text-sm text-gray-600">
             Don't have an account?
-            <Link to={"/signup" } className="inline-block">
-             
-                Sign-Up
-           
+            <Link to={"/signup"} className="text-sm text-blue-600 hover:underline-none">
+              Sign-Up
             </Link>
           </div>
         </form>
       </div>
     </div>
-)
-}
+  );
+};
 export default Login;

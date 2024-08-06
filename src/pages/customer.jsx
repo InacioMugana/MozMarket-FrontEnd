@@ -1,6 +1,6 @@
 import { Header } from "../components/header";
 import { Menu } from "../components/menu";
-import { Table } from "../components/Table";
+
 
 export const Customers = () => {
   const lojas = [

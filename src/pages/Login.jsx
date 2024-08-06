@@ -56,7 +56,7 @@ const Login = () => {
           </div>
           <div className="text-center text-sm text-gray-600">
             Don't have an account?
-            <Link to={"/signup"} className="inline-block">
+            <Link to={"/signup"} className="text-sm text-blue-600 hover:underline-none">
               Sign-Up
             </Link>
           </div>

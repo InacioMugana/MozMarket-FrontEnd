@@ -6,9 +6,8 @@ import { Store } from "./pages/Store"
 import { Customers } from "./pages/customer"
 import AddLoja from "./components/addLoja"
 import { SignUp } from "./pages/signup"
-
-
-
+import { Dashboard_User } from "./pages/users/Dashboard_User"
+import { Profile_User } from "./pages/users/Profile_User"
 
 export const Rotas=()=>{
     return(
@@ -20,6 +19,11 @@ export const Rotas=()=>{
             <Route path="/customer" element={<Customers/>} />
             <Route path="/add-store" element={<AddLoja/>} />
             <Route path="/signup" element={<SignUp/>} />
+
+
+            <Route path="/user/dashboard" element= {<Dashboard_User/>}/>
+            <Route path="/user/profile" element= {<Profile_User/>}/>
+    
         </Routes>
     )
 }

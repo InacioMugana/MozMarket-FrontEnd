@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
 
 export const AddLoja = () => {
@@ -57,7 +57,7 @@ export const AddLoja = () => {
               type="submit"
               className="bg-blue-500 text-white py-2 px-20 rounded-md"
             >
-              Sign
+              Register
             </button>
           </div>
         </form>

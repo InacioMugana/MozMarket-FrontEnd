@@ -1,18 +1,25 @@
 import { useState } from "react";
 import logo from "../../../assets/Logo.svg";
 import { List, ShoppingCartSimple } from "@phosphor-icons/react";
+import { Cart } from "../Cart";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
   return (
-    <header className="bg-gray-100  w-full shadow p-4 flex flex-col space-y-4 sm:space-y-0 relative">
+    <header className="bg-gray-100 w-full shadow p-4 flex flex-col space-y-4 sm:space-y-0 relative">
       <div className="w-full flex justify-between items-center sm:hidden">
         <button onClick={toggleMenu} className="focus:outline-none">
-        <List size={32} />
+          <List size={32} />
         </button>
         <nav
           className={`${
@@ -66,9 +73,17 @@ export const Navbar = () => {
               placeholder="Search..."
             />
           </div>
-          <ShoppingCartSimple size={32} />
+          <button onClick={toggleCart} className="focus:outline-none">
+            <ShoppingCartSimple size={32} />
+          </button>
         </div>
       </div>
+
+      {isCartOpen && (
+        <div className="absolute top-full right-0 mt-2 p-4 w-full max-w-sm bg-white shadow rounded-lg z-20">
+          <Cart />
+        </div>
+      )}
     </header>
   );
 };

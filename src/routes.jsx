@@ -20,7 +20,6 @@ export const Rotas=()=>{
             <Route path="/customer" element={<Customers/>} />
             <Route path="/add-store" element={<AddLoja/>} />
             <Route path="/signup" element={<SignUp/>} />
-          
         </Routes>
     )
 }

@@ -3,7 +3,7 @@ export const Table = () => {
 
   const lojas = [
     { name: 'MozTech', products: 120, categories: 'Electronics, Furniture' },
-    { name: 'Ladies', Store, products: 75, categories: 'Clothing, Accessories' },
+    { name: 'Ladies',  products: 75, categories: 'Clothing, Accessories' },
     { name: 'Moz Academic', products: 200, categories: 'Books, Stationery' },
     { Name: 'Shoprit', products: 50, categories: 'Food, Beverages' },
   ];

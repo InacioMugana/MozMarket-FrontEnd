@@ -28,7 +28,7 @@ export const Menu = () => {
             </NavLink>
             <NavLink to="/add-store" className="mb-2">
               <a href="#" className="block p-2 hover:bg-gray-200 rounded">
-                Add storea
+                Add store
               </a>
             </NavLink>
           </ul>
@@ -38,7 +38,7 @@ export const Menu = () => {
           <ul>
             <Link to="/" className="mb-2">
               <a href="#" className="block p-2 hover:bg-gray-200 rounded">
-                Configurações
+                settings
               </a>
             </Link>
             <NavLink to="/add-store" className="mb-2">

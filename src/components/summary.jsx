@@ -1,6 +1,6 @@
 export const Summary = () => {
   return (
-    <div  className="flex  flex-col bg-white shadow rounded-md">
+    <div className="flex  flex-col bg-white shadow rounded-md">
       <h1 className="font-semibold text-xl pl-9">Resume</h1>
       <div className="flex justify-between items-center p-8 ">
         <div className="flex-1 bg-[#F3E8FF] shadow rounded-lg p-6 m-2">
@@ -10,7 +10,7 @@ export const Summary = () => {
         </div>
         <div className="flex-1 bg-[#FFE2E5] shadow rounded-lg p-6 m-2">
           <h2 className="text-xl font-bold mb-2">Total Sales</h2>
-          <p className="text-3xl font-semibold">$ 50,000</p>
+          <p className="text-3xl font-semibold">MT 50,000</p>
           <p className="text-sm text-gray-500">Revenue generated</p>
         </div>
         <div className="flex-1 bg-[#FFF4DE] shadow rounded-lg p-6 m-2">

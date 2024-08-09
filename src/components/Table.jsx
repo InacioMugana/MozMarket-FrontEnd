@@ -7,17 +7,18 @@ export const Table = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/shops');
+        const response = await fetch("http://localhost:3000/api/shops");
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
         const data = await response.json();
+        console.log(data);
         setDados(data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-  
+
     fetchData();
   }, []);
 

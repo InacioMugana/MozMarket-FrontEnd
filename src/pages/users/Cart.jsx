@@ -13,17 +13,18 @@ export function Cart() {
   );
 
   const deleteItem = (id) => {
-    const itemToRemove = addCart.find((e) => e.id === id);
-    const data = addCart.filter((e) => e.id !== id);
+    const itemToRemove = addCart.find((e) => e._id === id);
+    const data = addCart.filter((e) => e._id !== id);
     setAddCart(data);
     toast.info(`Removed ${itemToRemove.name} from the cart`);
   };
 
+  // eslint-disable-next-line no-unused-vars
   const addItem = (item) => {
-    const existingItem = addCart.find((e) => e.id === item.id);
+    const existingItem = addCart.find((e) => e._id === item._id);
     if (existingItem) {
       const updatedCart = addCart.map((e) =>
-        e.id === item.id ? { ...e, quantity: e.quantity + 1 } : e
+        e._id === item._id ? { ...e, quantity: e.quantity + 1 } : e
       );
       setAddCart(updatedCart);
     } else {
@@ -51,7 +52,7 @@ export function Cart() {
                 className="grid grid-cols-[80px_1fr_80px] items-center gap-4 border-b"
               >
                 <img
-                  src={item.image}
+                  src={item.imagem}
                   alt={item.name}
                   width={80}
                   height={80}
@@ -65,7 +66,7 @@ export function Cart() {
                   </p>
                 </div>
                 <button
-                  onClick={() => deleteItem(item.id)}
+                  onClick={() => deleteItem(item._id)}
                   className="text-red-600 hover:text-red-800 focus:outline-none"
                 >
                   <FaTrash size={20} />

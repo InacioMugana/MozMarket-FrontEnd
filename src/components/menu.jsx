@@ -49,7 +49,7 @@ export const Menu = () => {
         </div>
       </div>
 
-      {/* Menu Móvel */}
+     
       <div className="lg:hidden">
         <button
           className="p-4 text-gray-800"
@@ -94,8 +94,8 @@ export const Menu = () => {
                 <NavLink to="/help" className="block p-2 hover:bg-gray-200 rounded">
                   Help
                 </NavLink>
-                <li>
-                  <button className="w-full p-2 bg-red-500 text-white rounded-full hover:bg-red-600">
+                <li className="mx-auto">
+                  <button className="p-2 bg-red-500  text-white rounded-full hover:bg-red-600">
                     Logout
                   </button>
                 </li>

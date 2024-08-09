@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useContext, useEffect, useState } from "react";
 import { Navbar } from "./components/navbar";
 import { FaTimes } from "react-icons/fa";
@@ -39,6 +40,7 @@ export const Home_user = () => {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
+  // eslint-disable-next-line no-unused-vars
   const { addCart, setAddCart } = useContext(AppContext);
 
   const cart = (id) => {
@@ -54,7 +56,7 @@ export const Home_user = () => {
           throw new Error("Failed to fetch products");
         }
         const data = await response.json();
-        console.log(data);
+
         setProducts(data);
       } catch (error) {
         console.error("Error fetching products:", error);

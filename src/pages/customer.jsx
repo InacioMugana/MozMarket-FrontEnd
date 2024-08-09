@@ -1,14 +1,29 @@
+/* eslint-disable no-unused-vars */
+import { useState, useEffect } from "react";
 import { Header } from "../components/header";
 import { Menu } from "../components/menu";
 
-
 export const Customers = () => {
-  const lojas = [
-    { name: "MozTech", Products: 120, Categories: "Electronics, Furniture" },
-    { name: "Ladies' Store", products: 75, categories: "Clothing, Accessories" },
-    { Name: "Moz Academic", products: 200, categories: "Books, Stationery" },
-    { Name: "Shoprit", products: 50, categories: "Food, Beverages" },
-  ];
+  const [dados, setDados] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/api/customers');
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
+        }
+        const data = await response.json();
+        setDados(data);
+        console.log(data); 
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []); 
+
   return (
     <>
       <div className="flex h-screen">
@@ -17,21 +32,23 @@ export const Customers = () => {
           <Header />
           <div className="flex-grow p-6">
             <div className="bg-white shadow rounded-lg p-6 mt-6">
-              <h2 className="text-2xl font-bold mb-4">costumer</h2>
+              <h2 className="text-2xl font-bold mb-4">Customers</h2>
               <table className="w-full text-left table-auto">
                 <thead>
                   <tr className="bg-[#D8F0FD]">
-                    <th className="px-4 py-2">Costumer Name</th>
-                    <th className="px-4 py-2">Number of Produts</th>
-                    <th className="px-4 py-2">Categories</th>
+                    <th className="px-4 py-2">Customer Name</th>
+                    <th className="px-4 py-2">LastName</th>
+                    <th className="px-4 py-2"> Email</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {lojas.map((loja, index) => (
+                  {dados.map((customer, index) => (
                     <tr key={index} className="border-t border-gray-300">
-                      <td className="px-4 py-2">{loja.name}</td>
-                      <td className="px-4 py-2">{loja.produts}</td>
-                      <td className="px-4 py-2">{loja.categories}</td>
+                      <td className="px-4 py-2">{customer.firstName}</td>
+                      <td className="px-4 py-2">{customer.lastName}</td> 
+                      <td className="px-4 py-2">
+                        {customer.email}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
